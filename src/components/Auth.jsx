@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 export default function Auth() {
-    const { login, register, isLoading, isAuthenticated, user, logout } =
+    const { login, register, isLoading, isAuthenticated } =
         useKindeAuth();
     const navigate = useNavigate();
     React.useEffect(() => {
@@ -13,12 +13,17 @@ export default function Auth() {
 
     const handleLogin = () => {
         login({
-          app_state: { redirectTo: '/dashboard' }
+            app_state: { redirectTo: '/dashboard' }
         });
+
+    };
+
+    const handleRegister = () => {
         register({
             app_state: { redirectTo: '/dashboard' }
-          });
-      };
+        });
+
+    };
 
     return (
         <section className="bg-gray-50 antialiased dark:bg-gray-900">
@@ -31,7 +36,7 @@ export default function Auth() {
                     {!isLoading && !isAuthenticated && (
                         <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 h-screen justify-center items-center">
                             <button
-                                onClick={handleLogin}
+                                onClick={handleRegister}
                                 type="button"
                                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                             >

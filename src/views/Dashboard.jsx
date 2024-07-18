@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
-    const { isLoading, isAuthenticated, user, logout } = useKindeAuth();
+    const { isLoading, isAuthenticated, user, logout, getToken } = useKindeAuth();
+
+    const fetchData = async () => {
+        try {
+            if (isAuthenticated) {
+                console.log(JSON.stringify(user, null, 2));
+                const accessToken = await getToken();
+                console.log(`Bearer ${accessToken}`);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    useEffect(() => { fetchData() },)
+
 
     return (
         <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
