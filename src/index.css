@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@50;300;400;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: '#1E1E1E';
+  scroll-behavior: smooth;
+}
+
+
+.text-stroke {
+  color: white; /* Text color */
+  text-shadow:
+    -12px -12px 0 #00d0ff, /* Top-left shadow */
+    12px -12px 0 #00d0ff,  /* Top-right shadow */
+    -12px 12px 0 #00d0ff,  /* Bottom-left shadow */
+    12px 12px 0 #00d0ff,   /* Bottom-right shadow */
+    -12px 0 0 #00d0ff,    /* Left shadow */
+    12px 0 0 #00d0ff,     /* Right shadow */
+    0 -12px 0 #00d0ff,    /* Top shadow */
+    0 12px 0 #00d0ff;     /* Bottom shadow */
+}
+.text-stroke-10 {
+  color: white; /* Text color */
+  text-shadow:
+    -10px -10px 0 #00d0ff, /* Top-left shadow */
+    10px -10px 0 #00d0ff,  /* Top-right shadow */
+    -10px 10px 0 #00d0ff,  /* Bottom-left shadow */
+    10px 10px 0 #00d0ff,   /* Bottom-right shadow */
+    -10px 0 0 #00d0ff,    /* Left shadow */
+    10px 0 0 #00d0ff,     /* Right shadow */
+    0 -10px 0 #00d0ff,    /* Top shadow */
+    0 10px 0 #00d0ff;     /* Bottom shadow */
+}
+.text-stroke-sm {
+  color: white; /* Text color */
+  text-shadow:
+    -5px -5px 0 #00d0ff, /* Top-left shadow */
+    5px -5px 0 #00d0ff,  /* Top-right shadow */
+    -5px 5px 0 #00d0ff,  /* Bottom-left shadow */
+    5px 5px 0 #00d0ff,   /* Bottom-right shadow */
+    -5px 0 0 #00d0ff,    /* Left shadow */
+    5px 0 0 #00d0ff,     /* Right shadow */
+    0 -5px 0 #00d0ff,    /* Top shadow */
+    0 5px 0 #00d0ff;     /* Bottom shadow */
+}
