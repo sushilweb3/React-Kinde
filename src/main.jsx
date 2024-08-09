@@ -41,9 +41,9 @@ const router = createBrowserRouter([
 const handleRedirectCallback = (user, appState) => {
   console.log({ user, appState });
   if (appState?.redirectTo) {
-    window.location.href = appState.redirectTo;
+    window.location = appState.redirectTo;
   } else {
-    window.location.href = '/';
+    window.location = "/";
   }
 };
 
