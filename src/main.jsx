@@ -38,14 +38,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const handleRedirectCallback = (user, appState) => {
-  console.log({ user, appState });
-  if (appState?.redirectTo) {
-    window.location = appState.redirectTo;
-  } else {
-    window.location = "/";
-  }
-};
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -54,7 +47,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       domain="https://basebrett.kinde.com"
       logoutUri={window.location.origin}
       redirectUri={window.location.origin}
-      onRedirectCallback={handleRedirectCallback}
     >
       <RouterProvider router={router} />
     </KindeProvider>
