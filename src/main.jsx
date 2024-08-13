@@ -47,10 +47,9 @@ const handleRedirectCallback = (user, appState) => {
   }
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <KindeProvider
-      isDangerouslyUseLocalStorage={true}
       clientId={import.meta.env.VITE_KINDE_CLIENT_ID}
       domain="https://basebrett.kinde.com"
       logoutUri={window.location.origin}
@@ -59,5 +58,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     >
       <RouterProvider router={router} />
     </KindeProvider>
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
