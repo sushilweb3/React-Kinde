@@ -52,7 +52,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <KindeProvider
       isDangerouslyUseLocalStorage={true}
       clientId={import.meta.env.VITE_KINDE_CLIENT_ID}
-      domain={import.meta.env.VITE_KINDE_DOMAIN}
+      domain="https://basebrett.kinde.com"
       logoutUri={window.location.origin}
       redirectUri={window.location.origin}
       onRedirectCallback={handleRedirectCallback}
